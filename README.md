@@ -24,7 +24,10 @@
 * DON'T use any 3rd party UI library i.e Material Design or Bootstrap
 
 ## Installation
-* `You Installation Guide Here`
+* Go to project directory (shopping-cart)
+* Install required packages `npm install`
+* Run server `ng serve`
+* View the page in your browser at `http://localhost:4200`
 
 ## Create Simple Shopping Cart 
 Please see the Attached `gif` for the Design

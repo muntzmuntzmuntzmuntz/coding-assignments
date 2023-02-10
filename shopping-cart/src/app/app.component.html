@@ -1,0 +1,23 @@
+<div class="home-page">
+  <div class="home-page-tab bg-green">
+    <button class="bg-green" [ngClass]="{'tab-active': isProductsTab}" (click)="onTabChange('products')">Products</button>
+    <button class="bg-green" [ngClass]="{'tab-active': !isProductsTab}" (click)="onTabChange('cart')">Cart ({{cartProductCount}})</button>
+  </div>
+
+  <div class="home-page-content">
+    <div class="product-list" *ngIf="productList.length > 0">
+      <div class="product" *ngFor="let product of productList">
+        <div class="product-info">
+          <span class="name">{{product.name}} </span>
+           - {{product.price}}
+           <span class="quantity" *ngIf="!isProductsTab">({{product.quantity}})</span>
+        </div>
+        <div class="product-button">
+          <button *ngIf="isProductsTab" class="bg-blue border-black-1" (click)="onAddToCart(product)">Add to Cart</button>
+          <button *ngIf="!isProductsTab" class="bg-blue border-black-1" (click)="onRemoveFromCart(product)">Remove from Cart</button>
+        </div>
+      </div>
+    </div>
+    <span class="empty-cart-state" *ngIf="cartProductCount === 0 && !isProductsTab">No Item In The Cart!</span>
+  </div>
+</div>
