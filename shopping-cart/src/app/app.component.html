@@ -10,7 +10,8 @@
         <div class="product-info">
           <span class="name">{{product.name}} </span>
            - {{product.price}}
-           <span class="quantity" *ngIf="!isProductsTab">({{product.quantity}})</span>
+          <span class="quantity" *ngIf="!isProductsTab">({{product.quantity}})</span>
+          <span class="in-stock" *ngIf="showStockFlag">[In Stock]</span>
         </div>
         <div class="product-button">
           <button *ngIf="isProductsTab" class="bg-blue border-black-1" (click)="onAddToCart(product)">Add to Cart</button>

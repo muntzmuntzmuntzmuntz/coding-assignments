@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   }
 
   isProductsTab = true;
+  showStockFlag = false;
 
   allProducts: Product[] = [];
   inCartProducts: Product[] = [];
